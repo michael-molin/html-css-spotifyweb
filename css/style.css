@@ -27,8 +27,9 @@
     flex-direction: column;
     height: 90vh;
     background-color: black;
-    padding: 25px 10px 0px 15px;
+    padding: 25px 10px 0px 10px;
     color: #646464;
+    justify-content: space-between;
 }
 
 .aside-full p {
@@ -37,14 +38,15 @@
 }
 
 .logo img {
-    max-width: 130px;
-    padding-bottom: 20px;
+    max-width: 145px;
+    padding: 0 0 20px 15px;
 }
 
 .icon-home, .icon-search , .icon-library {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0 10px 15px;
+    transition:0.3s;
 }
 
 .icon-home img, .icon-search img , .icon-library img {
@@ -54,14 +56,125 @@
 }
 
 .icon-home:hover, .icon-search:hover , .icon-library:hover {
-    transition:0.3s;
     color:white;
     cursor: pointer;
 }
 
- .icon-home:active, .icon-search:active , .icon-library:active {
+.icon-home:active, .icon-search:active , .icon-library:active {
     background: #282828;
     border-radius: 5px;
+}
+
+
+
+
+.aside-playlist {
+    padding: 30px 0 20px 15px;
+}
+
+.playlist-p {
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.new-playlist {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.block-playlist {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-color: #646464;
+    margin: 12px 15px 10px 0;
+    border-bottom: 1px solid #646464;
+    transition:0.3s;
+}
+
+.block-playlist span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: black;
+}
+
+.new-playlist p {
+    transition: 0.3s;
+}
+
+.new-playlist:hover .block-playlist {
+    background-color: white;
+}
+
+.new-playlist:hover p {
+    color:white;
+}
+
+.playlist-list p {
+    padding: 5px 0;
+}
+
+.playlist-list {
+    overflow-y:auto;
+}
+
+.playlist-list p:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+.download-app {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid  #646464;
+    transition: 0.3s;
+}
+
+.download-app:hover {
+    color: white;
+}
+
+.download-app img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.mini-profile {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.mini-profile p {
+    color:white;
+    text-transform: uppercase;
+}
+
+.box-profile-img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    background-color: #646464;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.box-profile-img img {
+    height: 25px;
+    width: 25px;
 }
 /* ------------------------------------------------------------ */
 /* FINE ASIDE */
