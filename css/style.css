@@ -22,11 +22,12 @@
 }
 
 .aside-full {
+    flex: 0 0 240px;
     display: flex;
     flex-direction: column;
     height: 90vh;
     background-color: black;
-    padding: 25px 60px 0px 20px;
+    padding: 25px 10px 0px 15px;
     color: #646464;
 }
 
@@ -37,14 +38,13 @@
 
 .logo img {
     max-width: 130px;
-    padding-bottom: 25px;
-    margin-right: 20px;
+    padding-bottom: 20px;
 }
 
 .icon-home, .icon-search , .icon-library {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    padding: 10px;
 }
 
 .icon-home img, .icon-search img , .icon-library img {
@@ -56,13 +56,13 @@
 .icon-home:hover, .icon-search:hover , .icon-library:hover {
     transition:0.3s;
     color:white;
+    cursor: pointer;
 }
 
-/* .icon-home:active, .icon-search:active , .icon-library:active {
+ .icon-home:active, .icon-search:active , .icon-library:active {
     background: #282828;
-    border-radius: 15px:
-    transition: 0.3s;
-} */
+    border-radius: 5px;
+}
 /* ------------------------------------------------------------ */
 /* FINE ASIDE */
 /* ------------------------------------------------------------ */
