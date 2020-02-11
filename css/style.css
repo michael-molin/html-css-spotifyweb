@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.container-right {
+    position: relative;
+}
+
+
+/* ------------------------------------------------------------ */
+/* INIZIO ASIDE */
+
+.aside-left {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    /* DA CANCELLARE */
+    background-color: red;
+    opacity: 0.5;
+    width: 10vw;
+
+}
+
+
+/* ------------------------------------------------------------ */
+/* FINE ASIDE */
+/* ------------------------------------------------------------ */
+/* INIZIO HEADER */
+
+header {
+    position: absolute;
+    top:0;
+    width: 98%;
+    /* DA CANCELLARE */
+    height: 10vh;
+    background-color: green;
+    opacity: 0.5;
+}
+
+/* ------------------------------------------------------------ */
+/* FINE HEADER */
+/* ------------------------------------------------------------ */
+/* INIZIO MAIN */
+
+main {
+    display:flex;
+    overflow-y: scroll;
+    /* width: 90vw; */
+    height: 90vh;
+    /* DA CANCELLARE */
+    background-color: yellow;
+    opacity: 0.5;
+    padding: 100px 50px 0 50px;
+}
+
+/* ------------------------------------------------------------ */
+/* FINE MAIN */
+/* ------------------------------------------------------------ */
+/* INIZIO FOOTER*/
+    footer {
+        width: 100vw;
+        height: 10vh;
+        /* DA CANCELLARE */
+        background-color: blue;
+        opacity: 0.5;
+    }
+
+/* ------------------------------------------------------------ */
+/* FINE FOOTER */
+
+
+
+
+@media screen and (max-width: ) {
+
+    .aside-left {
+        height: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+}
