@@ -77,6 +77,10 @@
     color: white;
 }
 
+.playlist-btn {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #646464;
+}
 
 .new-playlist {
     display: flex;
@@ -90,7 +94,7 @@
     height: 30px;
     width: 30px;
     background-color: #646464;
-    margin: 12px 15px 10px 0;
+    margin: 12px 15px 15px 0;
     border-bottom: 1px solid #646464;
     transition:0.3s;
 }
