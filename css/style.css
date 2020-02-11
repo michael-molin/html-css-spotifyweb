@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container-flex {
     display: flex;
 }
 
-.container-right {
+ .container-right {
     position: relative;
 }
 
@@ -16,29 +17,63 @@
 /* ------------------------------------------------------------ */
 /* INIZIO ASIDE */
 
-.aside-left {
+.aside-xs {
+    display: none;
+}
+
+.aside-full {
     display: flex;
     flex-direction: column;
     height: 90vh;
-    /* DA CANCELLARE */
-    background-color: red;
-    opacity: 0.5;
-    width: 10vw;
-
+    background-color: black;
+    padding: 25px 60px 0px 20px;
+    color: #646464;
 }
 
+.aside-full p {
+    font-size: 14px;
+    font-weight: 600;
+}
 
+.logo img {
+    max-width: 130px;
+    padding-bottom: 25px;
+    margin-right: 20px;
+}
+
+.icon-home, .icon-search , .icon-library {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-home img, .icon-search img , .icon-library img {
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+}
+
+.icon-home:hover, .icon-search:hover , .icon-library:hover {
+    transition:0.3s;
+    color:white;
+}
+
+/* .icon-home:active, .icon-search:active , .icon-library:active {
+    background: #282828;
+    border-radius: 15px:
+    transition: 0.3s;
+} */
 /* ------------------------------------------------------------ */
 /* FINE ASIDE */
 /* ------------------------------------------------------------ */
 /* INIZIO HEADER */
 
-header {
+.menu-top {
     position: absolute;
     top:0;
-    width: 98%;
+    width: 100%;
     /* DA CANCELLARE */
-    height: 10vh;
+    height: 100px;
     background-color: green;
     opacity: 0.5;
 }
@@ -51,7 +86,6 @@ header {
 main {
     display:flex;
     overflow-y: scroll;
-    /* width: 90vw; */
     height: 90vh;
     /* DA CANCELLARE */
     background-color: yellow;
@@ -64,11 +98,12 @@ main {
 /* ------------------------------------------------------------ */
 /* INIZIO FOOTER*/
     footer {
-        width: 100vw;
-        height: 10vh;
+
         /* DA CANCELLARE */
         background-color: blue;
         opacity: 0.5;
+        width: 100vw;
+        height: 10vh;
     }
 
 /* ------------------------------------------------------------ */
@@ -77,13 +112,13 @@ main {
 
 
 
-@media screen and (max-width: ) {
+@media screen and (max-width: 350px ) {
 
-    .aside-left {
-        height: 100%;
+    .aside-full {
+        display:none;
     }
 
-    main {
-        width: 100%;
+    .aside-xs {
+        display:block;
     }
 }
