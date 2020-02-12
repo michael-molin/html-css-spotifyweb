@@ -17,10 +17,6 @@
 /* ------------------------------------------------------------ */
 /* INIZIO ASIDE */
 
-.aside-xs {
-    display: none;
-}
-
 .aside-full {
     flex: 0 0 240px;
     display: flex;
@@ -36,6 +32,8 @@
     font-size: 14px;
     font-weight: 600;
 }
+
+/*  ASIDE TOP */
 
 .logo img {
     max-width: 145px;
@@ -65,8 +63,7 @@
     border-radius: 5px;
 }
 
-
-
+/*  ASIDE PLAYLIST */
 
 .aside-playlist {
     padding: 30px 0 20px 15px;
@@ -133,10 +130,7 @@
 }
 
 
-
-
-
-
+/* ASIDE BOT */
 
 .download-app {
     display: flex;
@@ -165,12 +159,12 @@
 .mini-profile p {
     color:white;
     text-transform: uppercase;
+    margin-left: 10px;
 }
 
 .box-profile-img {
     height: 30px;
     width: 30px;
-    margin-right: 10px;
     background-color: #646464;
     border-radius: 50%;
     text-align: center;
@@ -179,6 +173,30 @@
 .box-profile-img img {
     height: 25px;
     width: 25px;
+}
+
+/*  ASIDE XS */
+
+.aside-xs {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 90vh;
+    background-color: black;
+    align-items: center;
+    padding: 10px;
+}
+
+.aside-xs img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#logo-xs {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 10px;
 }
 /* ------------------------------------------------------------ */
 /* FINE ASIDE */
@@ -189,10 +207,24 @@
     position: absolute;
     top:0;
     width: 100%;
-    /* DA CANCELLARE */
-    height: 100px;
-    background-color: green;
-    opacity: 0.5;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.upgrade {
+    float:right;
+    margin: 22px 18px 22px 0;
+    padding: 10px 30px;
+    border-radius: 165px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.upgrade h6 {
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* ------------------------------------------------------------ */
@@ -210,6 +242,8 @@ main {
     padding: 100px 50px 0 50px;
 }
 
+
+
 /* ------------------------------------------------------------ */
 /* FINE MAIN */
 /* ------------------------------------------------------------ */
@@ -226,16 +260,24 @@ main {
 /* ------------------------------------------------------------ */
 /* FINE FOOTER */
 
-
-
-
-@media screen and (max-width: 350px ) {
+@media screen and (max-width: 475px ) {
 
     .aside-full {
         display:none;
     }
 
     .aside-xs {
-        display:block;
+        display: flex;
     }
+}
+
+@media screen and (min-width: 476px) {
+    .aside-full {
+        display: flex;
+    }
+
+    .aside-xs {
+        display:none;
+    }
+
 }
