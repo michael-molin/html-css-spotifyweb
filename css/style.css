@@ -236,10 +236,40 @@
 main {
     display:flex;
     overflow-y: scroll;
+    width: 100%;
     height: calc(100vh - 75px);
-    /* DA CANCELLARE */
-    background-color: yellow;
-    padding: 100px 50px 0 50px;
+    background-color: #141922;
+    padding: 90px 15px 0 15px;
+    flex-direction: column;
+    align-items: center;
+    color: #646464;
+}
+
+.list-top {
+    display: flex;
+    justify-content: center;
+}
+
+.li-element {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.li-element p {
+    font-size: 14px;
+}
+
+.li-element:hover p {
+    color: white;
+}
+
+.li-element:hover .li-line {
+    width: 40px;
+    border: 1px solid #adff2f;
 }
 
 
