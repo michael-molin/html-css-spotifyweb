@@ -260,6 +260,17 @@ main {
         height: 75px;
     }
 
+    footer i {
+        font-size: 20px;
+        cursor:pointer;
+        margin-right: 15px;
+        transition: 0.3s;
+    }
+
+    footer i:hover {
+        color: white;
+    }
+
 /* FOOTER SX  */
     .footer-left {
         width: 240px;
@@ -286,15 +297,8 @@ main {
     }
 
     .left-icons i {
-        font-size: 20px;
         margin-right: 5px;
-        cursor: pointer;
     }
-
-    .left-icons i:hover {
-        color: white;
-    }
-
 /* FOOTER CENTER */
 
 .footer-center {
@@ -309,17 +313,6 @@ main {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.control-btn i {
-    font-size: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.control-btn i:hover {
-    color:white;
 }
 
 #btn-play {
@@ -347,13 +340,37 @@ main {
     width: 25%;
     border-radius: 15px;
     background-color: white;
-    transition: 2s;
 }
 
 /* #btn-play:active .song-actual-lenght {
     width: 100%;
 } */
 /* FOOTER RIGHT */
+
+
+.footer-right {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.volume-max {
+    width: 5vw;
+    height: 3px;
+    background-color: #646464;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.volume-actual {
+    z-index: 1;
+    width: 70%;
+    cursor: pointer;
+    background-color: white;
+    height: 3px;
+    border-radius: 15px;
+}
 
 /* ------------------------------------------------------------ */
 /* FINE FOOTER */
