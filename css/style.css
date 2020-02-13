@@ -17,8 +17,37 @@
 /* ------------------------------------------------------------ */
 /* INIZIO ASIDE */
 
+/*  ASIDE XS */
+
+.aside-xs {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100vh - 75px);
+    background-color: black;
+    align-items: center;
+    padding: 10px;
+    z-index: 1
+}
+
+.aside-xs img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#logo-xs {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+/* ASIDE DESKTOP */
+
+
 .aside-full {
-    flex: 0 0 240px;
+    flex: 0 33.333333vw;
+    max-width: 240px;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 75px);
@@ -26,6 +55,7 @@
     padding: 25px 10px 0px 10px;
     color: #646464;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .aside-full p {
@@ -119,6 +149,7 @@
 
 .playlist-list p {
     padding: 5px 0;
+    cursor: pointer;
 }
 
 .playlist-list {
@@ -142,6 +173,7 @@
 
 .download-app:hover {
     color: white;
+    cursor: pointer;
 }
 
 .download-app img {
@@ -175,29 +207,7 @@
     width: 25px;
 }
 
-/*  ASIDE XS */
 
-.aside-xs {
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: calc(100vh - 75px);
-    background-color: black;
-    align-items: center;
-    padding: 10px;
-}
-
-.aside-xs img {
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-}
-
-#logo-xs {
-    height: 25px;
-    width: 25px;
-    margin-bottom: 10px;
-}
 /* ------------------------------------------------------------ */
 /* FINE ASIDE */
 /* ------------------------------------------------------------ */
@@ -234,13 +244,18 @@
 /* ------------------------------------------------------------ */
 /* INIZIO MAIN */
 
+
+.container-right {
+    min-width: 66.6666666vw;
+}
+
 main {
     display:flex;
     overflow-y: scroll;
     width: 100%;
     height: calc(100vh - 75px);
     background-color: #141922;
-    padding: 90px 15px 0 15px;
+    padding: 90px 0px 0 35px;
     flex-direction: column;
     color: #646464;
 }
@@ -257,16 +272,21 @@ main h3 {
 .list-top {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
+    transition: 0.3s;
 }
 
 .li-element {
     text-transform: uppercase;
     font-weight: 600;
-    margin-right: 15px;
     display: flex;
     flex-direction: column;
+    margin-right: 15px;
     align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .li-line {
@@ -274,7 +294,9 @@ main h3 {
 }
 
 .li-element p {
-    font-size: 12px;
+    font-size: 11px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .li-element:hover p {
@@ -282,8 +304,14 @@ main h3 {
 }
 
 .li-element:hover .li-line {
-    width: 40px;
+    margin: 0 auto;
+    width: 50%;
     border: 1px solid #adff2f;
+}
+
+.li-element:hover {
+    margin: 0 50px;
+    transform: scale(2);
 }
 
 .music-flex {
@@ -300,11 +328,12 @@ main h3 {
     align-items: center;
     margin-right: 15px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .music-img {
-    width: 150px;
-    height: 175px;
+    width: 160px;
+    height: 180px;
     position:relative;
     margin-bottom: 20px
 }
@@ -325,7 +354,7 @@ main h3 {
 }
 
 .music-card:hover img {
-    filter:blur(4px);
+    filter:blur(5px);
 }
 
 .music-card:hover i {
@@ -352,6 +381,9 @@ main h3 {
     padding-bottom: 30px;
 }
 
+
+/* MAIN MENU HAMBUGER */
+
 /* ------------------------------------------------------------ */
 /* FINE MAIN */
 /* ------------------------------------------------------------ */
@@ -364,6 +396,7 @@ main h3 {
         background-color: #282828;
         width: 100vw;
         height: 75px;
+        z-index: 99;
     }
 
     footer i {
@@ -383,11 +416,8 @@ main h3 {
 
 /* FOOTER SX  */
     .footer-left {
-        /* width: 240px; */
-         flex: 1 1 33vw;
-        /*max-width: 33vw; */
+         flex: 1 1 33.33333vw;
         display: flex;
-        /* justify-content: space-between; */
         align-items: center;
     }
 
@@ -422,8 +452,7 @@ main h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1 1 33vw;
-    /* width: 33vw; */
+    flex: 1 1 33.3333vw;
 }
 
 .control-btn {
@@ -458,17 +487,13 @@ main h3 {
     border:3px solid white;
 }
 
-/* #btn-play:active .song-actual-lenght {
-    width: 100%;
-} */
 /* FOOTER RIGHT */
-
 
 .footer-right {
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 1 1 33vw;
+    flex: 1 1 33.33333vw;
 }
 
 .volume-max {
@@ -492,7 +517,7 @@ main h3 {
 /* ------------------------------------------------------------ */
 /* FINE FOOTER */
 
-@media screen and (max-width: 499.98px ) {
+@media screen and (max-width: 534.98px ) {
 
     .aside-full {
         display:none;
@@ -523,7 +548,7 @@ main h3 {
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 535px) {
     .aside-full {
         display: flex;
     }
@@ -533,7 +558,7 @@ main h3 {
     }
 }
 
-@media screen and (max-width: 779.98px) {
+@media screen and (max-width: 799.98px) {
     footer * {
         transform: scale(0.92);
     }
@@ -549,17 +574,33 @@ main h3 {
     footer img {
         margin: 0 auto;
     }
+
+    main {
+        padding: 90px 0 40px 20px;
+    }
+
+    .music-flex {
+        justify-content: space-evenly;
+    }
+
+    .li-element p {
+        transform: scale(0.8);
+        }
 }
 
-/* @media screen and (max-width: 499.98px) {
-    footer * {
-        transform: scale(0.9);
+@media screen and (max-width: 729.98px) {
+    .li-element{
+        transform: scale(0.6);
     }
-    footer i {
-        margin-right: 6px;
+}
+
+
+@media screen and (max-height:699.98px) {
+    .aside-full {
+        display: none;
     }
 
-    .volume-max {
-        margin-right: 6px;
+    .aside-xs {
+        display:flex;
     }
-} */
+}
